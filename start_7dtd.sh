@@ -110,12 +110,12 @@ if [ ! -f "${SEVEN_DAYS_TO_DIE_CONFIG_FILE}" ]; then
 fi
 
 DOORSTOP_ENABLE=TRUE
-DOORSTOP_INVOKE_DLL_PATH=/steamcmd/7dtd/7DaysToDieServer_Data/BepInEx/core/BepInEx.Preloader.dll
+DOORSTOP_INVOKE_DLL_PATH=/steamcmd/7dtd/BepInEx/core/BepInEx.Preloader.dll
 DOORSTOP_CORLIB_OVERRIDE_PATH=BepInEx/core/
-LD_LIBRARY_PATH=/steamcmd/7dtd/7DaysToDieServer_Data/doorstop_libs/:${LD_LIBRARY_PATH}
-LD_PRELOAD=/steamcmd/7dtd/7DaysToDieServer_Data/doorstop_libs/libdoorstop_x64.so:$LD_PRELOAD
-DYLD_LIBRARY_PATH=/steamcmd/7dtd/7DaysToDieServer_Data/doorstop_libs/
-DYLD_INSERT_LIBRARIES=/steamcmd/7dtd/7DaysToDieServer_Data/doorstop_libs/libdoorstop_x64.so
+LD_LIBRARY_PATH=/steamcmd/7dtd/doorstop_libs/:${LD_LIBRARY_PATH}
+LD_PRELOAD=/steamcmd/7dtd/doorstop_libs/libdoorstop_x64.so:$LD_PRELOAD
+DYLD_LIBRARY_PATH=/steamcmd/7dtd/doorstop_libs/
+DYLD_INSERT_LIBRARIES=/steamcmd/7dtd/doorstop_libs/libdoorstop_x64.so
 
 # Run the server
 /steamcmd/7dtd/7DaysToDieServer.x86_64 ${SEVEN_DAYS_TO_DIE_SERVER_STARTUP_ARGUMENTS} -configfile=${SEVEN_DAYS_TO_DIE_CONFIG_FILE} &
